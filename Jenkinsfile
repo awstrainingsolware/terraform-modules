@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Sum') {
+        stage('Initialize') {
             steps {
-                echo '2+3 = 5'
+                terraform init
             }
         }
-        stage('Sub') {
+        stage('Plan') {
             steps {
-                echo '3-2 = 1'
+                terraform plan
             }
         }
-        stage('Div') {
+        stage('Apply') {
             steps {
-                echo '6/2 = 3'
+                terraform apply
             }
         }
     }
