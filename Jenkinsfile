@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Sum') {
             steps {
-                echo 'Building..'
+                echo '2+3 = 5'
             }
         }
-        stage('Test') {
+        stage('Sub') {
             steps {
-                echo 'Testing..'
+                echo '3-2 = 1'
             }
         }
-        stage('Deploy') {
+        stage('Div') {
             steps {
-                echo 'Deploying....'
+                echo '6/2 = 3'
             }
         }
     }
